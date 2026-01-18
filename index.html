@@ -36,6 +36,9 @@
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
   <!-- Structured Data: Article -->
   <script type="application/ld+json">
   {
@@ -48,7 +51,7 @@
       "name": "Raphael Beaupre"
     },
     "datePublished": "2026-01-07",
-    "dateModified": "2026-01-14",
+    "dateModified": "2026-01-18",
     "publisher": {
       "@type": "Organization",
       "name": "Université de Sherbrooke - IGE 511"
@@ -124,377 +127,20 @@
     ]
   }
   </script>
-
-  <style>
-    :root {
-      --primary-color: #6366f1;
-      --primary-dark: #4f46e5;
-      --secondary-color: #0ea5e9;
-      --accent-color: #8b5cf6;
-      --bg-color: #0f172a;
-      --bg-secondary: #1e293b;
-      --bg-tertiary: #334155;
-      --text-color: #f1f5f9;
-      --text-muted: #94a3b8;
-      --border-color: #475569;
-      --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #0ea5e9 100%);
-      --gradient-2: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-      --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      padding: 0;
-      background: var(--bg-color);
-      color: var(--text-color);
-      min-height: 100vh;
-    }
-
-    .hero {
-      background: var(--gradient-2);
-      padding: 4rem 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 70% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
-      pointer-events: none;
-    }
-
-    .hero-content {
-      max-width: 900px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 4rem);
-      font-weight: 800;
-      background: var(--gradient-1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin: 0 0 1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .subtitle {
-      font-size: 1.25rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      max-width: 600px;
-      margin-inline: auto;
-    }
-
-    .badge {
-      display: inline-block;
-      background: var(--bg-tertiary);
-      color: var(--secondary-color);
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      font-size: 0.875rem;
-      font-weight: 500;
-      border: 1px solid var(--border-color);
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-
-    .card {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-glow);
-    }
-
-    h2 {
-      color: var(--text-color);
-      font-size: 1.75rem;
-      margin-top: 0;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    h2::before {
-      content: '';
-      display: inline-block;
-      width: 4px;
-      height: 1.5rem;
-      background: var(--gradient-1);
-      border-radius: 2px;
-    }
-
-    h3 {
-      color: var(--primary-color);
-      font-size: 1.25rem;
-      margin-top: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-    }
-
-    strong {
-      color: var(--text-color);
-    }
-
-    /* Table of Contents */
-    .toc {
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 1.5rem 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .toc h3 {
-      margin-top: 0;
-      color: var(--text-color);
-      font-size: 1.1rem;
-    }
-
-    .toc ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0.75rem;
-    }
-
-    .toc a {
-      color: var(--secondary-color);
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      display: block;
-      border-radius: 8px;
-      transition: background 0.2s ease;
-    }
-
-    .toc a:hover {
-      background: rgba(99, 102, 241, 0.1);
-    }
-
-    /* Code styling */
-    code {
-      background: var(--bg-tertiary);
-      color: var(--secondary-color);
-      padding: 0.2rem 0.5rem;
-      border-radius: 6px;
-      font-family: 'JetBrains Mono', 'Fira Code', monospace;
-      font-size: 0.85em;
-    }
-
-    /* Lists */
-    ul,
-    ol {
-      color: var(--text-muted);
-      padding-left: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.75rem;
-    }
-
-    li::marker {
-      color: var(--primary-color);
-    }
-
-    /* FAQ Section */
-    .faq-item {
-      border-bottom: 1px solid var(--border-color);
-      padding: 1.5rem 0;
-    }
-
-    .faq-item:last-child {
-      border-bottom: none;
-    }
-
-    .faq-question {
-      color: var(--text-color);
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-
-    .faq-question::before {
-      content: 'Q';
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 28px;
-      height: 28px;
-      background: var(--gradient-1);
-      color: white;
-      border-radius: 6px;
-      font-size: 0.875rem;
-      font-weight: 700;
-    }
-
-    .faq-answer {
-      color: var(--text-muted);
-      padding-left: 2.5rem;
-    }
-
-    /* Stats Grid */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-
-    .stat-card {
-      background: var(--bg-tertiary);
-      border-radius: 12px;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .stat-value {
-      font-size: 2rem;
-      font-weight: 700;
-      background: var(--gradient-1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .stat-label {
-      color: var(--text-muted);
-      font-size: 0.875rem;
-      margin-top: 0.25rem;
-    }
-
-    /* Footer */
-    footer {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-color);
-      padding: 3rem 2rem;
-      margin-top: 4rem;
-    }
-
-    .footer-content {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .author-info {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      background: var(--bg-tertiary);
-      border-radius: 12px;
-    }
-
-    .author-avatar {
-      width: 60px;
-      height: 60px;
-      background: var(--gradient-1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: white;
-    }
-
-    .author-details h4 {
-      margin: 0;
-      color: var(--text-color);
-    }
-
-    .author-details p {
-      margin: 0.25rem 0 0;
-      font-size: 0.875rem;
-    }
-
-    /* Changelog */
-    .changelog-item {
-      display: flex;
-      gap: 1rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .changelog-item:last-child {
-      border-bottom: none;
-    }
-
-    .changelog-date {
-      min-width: 120px;
-      color: var(--secondary-color);
-      font-weight: 600;
-      font-size: 0.875rem;
-    }
-
-    .changelog-text {
-      color: var(--text-muted);
-    }
-
-    /* Responsive */
-    @media (max-width: 640px) {
-      .hero {
-        padding: 3rem 1.5rem;
-      }
-
-      .container {
-        padding: 2rem 1.5rem;
-      }
-
-      .card {
-        padding: 1.5rem;
-      }
-
-      .toc ul {
-        grid-template-columns: 1fr;
-      }
-
-      .author-info {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-  </style>
 </head>
 
 <body>
+
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">iuytresdcvbhnt</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="seo.html">Documentation SEO</a>
+        <a href="resources.html">Ressources</a>
+      </div>
+    </div>
+  </nav>
 
   <header class="hero">
     <div class="hero-content">
@@ -603,6 +249,9 @@
           <li><strong>Structure Heading :</strong> Hiérarchie H1-H2-H3 respectée avec intégration naturelle du mot-clé.
           </li>
           <li><strong>Contenu de qualité :</strong> Texte informatif et pertinent autour du thème iuytresdcvbhnt.</li>
+          <li><strong>Nouveau Maillage Interne :</strong> Création de pages dédiées à la <a
+              href="seo.html">documentation SEO</a> et aux <a href="resources.html">ressources</a> pour enrichir la
+            structure du site.</li>
         </ul>
 
         <h3>Optimisation Technique</h3>
@@ -690,6 +339,16 @@
 
       <section id="changelog">
         <h2>Registre des changements</h2>
+
+        <div class="changelog-item">
+          <span class="changelog-date">18 janvier 2026</span>
+          <span class="changelog-text">
+            Expansion du site avec l'ajout de deux nouvelles pages ("Documentation SEO" et "Ressources") pour enrichir
+            le maillage interne.
+            Extraction des styles CSS dans un fichier externe pour améliorer la mise en cache et la maintenabilité.
+            Ajout d'une barre de navigation principale sur toutes les pages.
+          </span>
+        </div>
 
         <div class="changelog-item">
           <span class="changelog-date">14 janvier 2026</span>
