@@ -34,15 +34,45 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
     rel="stylesheet">
 
-  <!-- Schema.org Organization -->
+  <!-- Schema.org Bakery (LocalBusiness) -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "Bakery",
       "name": "L'Atelier iuytresdcvbhnt",
+      "image": "https://iuytresdcvbhnt-bear2809.github.io/assets/cheesecake_mystery.png",
       "url": "https://iuytresdcvbhnt-bear2809.github.io/",
       "logo": "https://iuytresdcvbhnt-bear2809.github.io/assets/atelier_logo.png",
-      "description": "Atelier pâtisserie spécialisé dans les cheesecakes mystères."
+      "description": "Atelier pâtisserie spécialisé dans les cheesecakes mystères.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Faculté de Sciences, 2500 Bd de l'Université",
+        "addressLocality": "Sherbrooke",
+        "postalCode": "J1K 2R1",
+        "addressRegion": "QC",
+        "addressCountry": "CA"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+         {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "10:00",
+          "closes": "16:00"
+        }
+      ]
     }
     </script>
 </head>
@@ -185,7 +215,8 @@
         <div class="footer-column">
           <img src="assets/atelier_logo.png" alt="Logo" style="height: 50px; opacity:0.9; margin-bottom:1rem;">
           <p><strong>L'Atelier iuytresdcvbhnt</strong><br>
-            123 Avenue de la Pâtisserie<br></p>
+            Faculté de Sciences, Université de Sherbrooke<br>
+            2500 Bd de l'Université, Sherbrooke, QC J1K 2R1</p>
           <p>
             <a href="https://www.facebook.com/people/LAtelier-iuytresdcvbhnt/61587577556083/" target="_blank"
               rel="noopener noreferrer" class="social-chip">
@@ -194,6 +225,16 @@
                   d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
               Suivez-nous sur Facebook
+            </a>
+          </p>
+          <p style="margin-top: 0.5rem;">
+            <a href="https://www.instagram.com/atelier_iuytresdcvbhnt/" target="_blank" rel="noopener noreferrer"
+              class="social-chip instagram">
+              <svg class="social-icon" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+              Suivez-nous sur Instagram
             </a>
           </p>
         </div>
@@ -219,6 +260,7 @@
       <div class="author-info">
         <div class="author-avatar">RB</div>
         <div class="author-details">
+          <p>Raphael Beaupre</p>
           <p>CIP : bear2809</p>
           <p>Université de Sherbrooke – IGE 511</p>
         </div>
@@ -226,6 +268,15 @@
 
       <div id="changelog" style="margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
         <h2>Registre des changements</h2>
+
+        <div class="changelog-item">
+          <span class="changelog-date">5 février 2026</span>
+          <span class="changelog-text">
+            Amélioration SEO : Mise à jour du Schema.org FAQ et harmonisation du contenu. Ajout du lien Instagram.
+            Contextualisation locale (Adresse Faculté de Sciences UdeS) et ajout de
+            l'avertissement "Projet étudiant" sur toutes les pages. Le tout réalisé par Gemini.
+          </span>
+        </div>
 
         <div class="changelog-item">
           <span class="changelog-date">4 février 2026</span>
@@ -322,6 +373,10 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 L'Atelier iuytresdcvbhnt. Projet IGE 511.</p>
+        <p style="font-style: italic; opacity: 0.7; font-size: 0.8rem; margin-top: 0.5rem;">
+          Ce site est un projet étudiant réalisé dans le cadre du cours IGE 511. L'Atelier iuytresdcvbhnt est une
+          entreprise fictive. Aucune commande réelle ne sera traitée.
+        </p>
       </div>
     </div>
   </footer>
