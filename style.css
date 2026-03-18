@@ -551,3 +551,108 @@ section {
   margin-bottom: 0.2rem;
   font-size: 1rem;
 }
+
+/* --- Instagram Featured Section --- */
+.instagram-featured {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 3rem auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.insta-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.8rem;
+}
+
+.insta-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f09433, #bc1888);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.insta-username {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #262626;
+}
+
+.insta-image-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.insta-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.instagram-featured:hover .insta-image-container img {
+  transform: scale(1.05);
+}
+
+.insta-actions {
+  padding: 0.8rem 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.insta-icon {
+  width: 24px;
+  height: 24px;
+  opacity: 0.8;
+  cursor: pointer;
+  color: #262626;
+}
+
+.insta-icon:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+.insta-content {
+  padding: 0 1rem 1rem;
+  text-align: left;
+}
+
+.insta-likes {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  display: block;
+  color: #262626;
+}
+
+.insta-caption {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #262626;
+}
+
+.insta-caption strong {
+  margin-right: 0.4rem;
+}
+
+.insta-hashtags {
+  color: #00376b;
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+}
